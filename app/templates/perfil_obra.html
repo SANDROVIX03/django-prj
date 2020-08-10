@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Perfil da Obra
+{% endblock title %}
+
+{% block content %}
+<div class="row">
+
+  <div class="col-md-4">
+    <div class="thumbnail">
+        <img src="{{obra.IMG_OBRA.url}}" style="width:100%">
+        <div class="caption">
+        </div>
+    </div>
+  </div>
+    <div class="col-md-8">
+<ul class="list-group">
+  <li class="list-group-item">Cliente: {{obra.NOM_CLIENT_OBRA}}</li>
+  <li class="list-group-item">Data Início: {{obra.DAT_OBRA}}</li>
+  <li class="list-group-item">Nome da Obra: {{obra.NOM_OBRA}}</li>
+  <li class="list-group-item">Supervisor: {{obra.NOM_FNCRSP_OBRA}}</li>
+</ul>
+    </div>
+
+</div>
+{% endblock content %}
